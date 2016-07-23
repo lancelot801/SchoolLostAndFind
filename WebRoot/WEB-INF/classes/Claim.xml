@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 指定全局国际化资源文件 -->
+    <constant name="struts.custom.i18n.resources" value="mess"></constant> 
+	<!-- 指定国际化编码所用的字符集 -->
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<!-- 所有的Action定义都在package下 -->  
+    <constant name="struts.devMode" value="true"></constant>
+    
+    <package name="Claim" extends="struts-default">
+    	<action name="CClaim" class="com.myproject.action.CalimAction" method="CClaim">      		   	
+    	</action>
+    	<action name="findAllByUsrId" class="com.myproject.action.CalimAction" method="findAllByUsrId">      		   	
+    	</action>
+    </package>
+     
+</struts>

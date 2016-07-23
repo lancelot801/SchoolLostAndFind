@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 指定全局国际化资源文件 -->
+    <constant name="struts.custom.i18n.resources" value="mess"></constant> 
+	<!-- 指定国际化编码所用的字符集 -->
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<!-- 所有的Action定义都在package下 -->  
+    <constant name="struts.devMode" value="true"></constant>
+    
+    <package name="basic" extends="struts-default">
+    	<action name="getAllItemsCategory" class="com.myproject.action.BasicDataHandler" method="getAllItemsCategory">      		   	
+    	</action>
+    	<action name="findNews" class="com.myproject.action.BasicDataHandler" method="findNews"></action>
+    	<action name="findUserDetail" class="com.myproject.action.BasicDataHandler" method="findUserDetail"></action>
+    	<action name="addWAd" class="com.myproject.action.BasicDataHandler" method="addWAd"></action>
+    	
+    </package>
+     
+</struts>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 指定全局国际化资源文件 -->
+    <constant name="struts.custom.i18n.resources" value="mess"></constant> 
+	<!-- 指定国际化编码所用的字符集 -->
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<!-- 所有的Action定义都在package下 -->
+    <constant name="struts.devMode" value="true"></constant>
+    
+    
+    <package name="picking" extends="struts-default">
+    	<action name="addPicking" class="com.myproject.action.PickingAction" method="addPicking">
+    		<result name="success">/main.jsp</result>
+    		<result name="error">/main.jsp</result>
+    	</action>
+    	<action name="pickingTop" class="com.myproject.action.PickingAction" method="findTopItems">
+    	</action>
+    	<action name="findPickingDetail" class="com.myproject.action.PickingAction" method="findPickingDetail">
+    	</action>
+    	<action name="findAllPickingItems" class="com.myproject.action.PickingAction" method="findAllPickingItems"></action>    	
+    	<action name="findAllPickingByCategory" class="com.myproject.action.PickingAction" method="findAllPickingByCategory">
+    	</action> 
+    	<action name="findAllPickingByuserId" class="com.myproject.action.PickingAction" method="findAllPickingByuserId">
+    	</action> 
+    	<action name="findVaFind" class="com.myproject.action.PickingAction" method="findVaFind"></action>
+	    <action name="passValidatePick" class="com.myproject.action.PickingAction" method="passValidatePick"></action>   	
+    </package>   
+     
+</struts>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 指定全局国际化资源文件 -->
+    <constant name="struts.custom.i18n.resources" value="mess"></constant> 
+	<!-- 指定国际化编码所用的字符集 -->
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<!-- 所有的Action定义都在package下 -->
+    <constant name="struts.devMode" value="true"></constant>
+    
+    <package name="userRegist" extends="struts-default" namespace="/">
+    	<action name="regist" class="com.myproject.action.RegistAction" method="registUser">
+    		<result name="success">/main.jsp</result>
+    		<result name="error">/main.jsp</result>
+    	</action>
+    </package>
+    <package name="userLogin" extends="struts-default" namespace="/">
+    	<action name="login" class="com.myproject.action.LoginAction" method="userLogin">
+    		<result name="success">/index.jsp</result>
+    		<result name="error">/index.jsp</result>
+    	</action>
+    </package>
+    <package name="myinfo" extends="struts-default" namespace="/">
+    	<action name="updateUserInfo" class="com.myproject.action.UserAction" method="updateUserInfo" ></action>
+    </package>
+     
+</struts>
